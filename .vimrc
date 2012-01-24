@@ -73,6 +73,11 @@ let g:CommandTMaxHeight= 10
 
 " Syntastic Options
 let g:syntastic_auto_loc_list=1
+let g:syntastic_mode_map = { "mode": "active",
+                           \ 'active_filetypes': ['go', 'haskell', 'ocaml',
+                           \    'ruby', 'python', 'yaml',
+                           \    'javascript', 'json', 'less',
+                           \    'puppet'] }
 
 " Shortcuts
 map <C-k> <C-w>k
@@ -105,4 +110,3 @@ map <F1> :echo "F1 is for racing"<CR>
 
 autocmd VimEnter COMMIT_EDITMSG :call cursor(1,1)
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
-
