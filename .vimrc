@@ -1,4 +1,4 @@
-" ogd@aoaioxxysz.net / othiym23 / Forrest L Norvell's vimrc 2012/01/23
+" ogd@aoaioxxysz.net / othiym23 / Forrest L Norvell's vimrc 2012/01/24
 "
 " Use Vim settings, rather than Vi settings
 " This must be first, because it changes other options as a side effect.
@@ -7,23 +7,19 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set autoindent		" always set autoindenting on
+set autoindent
+set smartindent
 set nobackup		" do not keep a backup file -- let VCS take care of that
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-set laststatus=2 	" always display status line
-set wildmenu 		" use enhanced command completion
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
 " Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   syntax on
-  set hlsearch
 endif
 
 if has("autocmd")
@@ -46,8 +42,28 @@ endif
 map <Leader>v :sp ~/.vimrc<CR><C-W>_
 map <silent> <Leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
+" Search
+set incsearch		" do incremental searching
+set ignorecase          " ignore case in searches by default
+set smartcase           " case sensitive if you include upper case
+set hlsearch            " highlight last-used search pattern
+
 " UI
-set mouse=a " On!
+set mouse=a             " On!
+set laststatus=2 	" always display status line
+set wildmenu 		" use enhanced command completion
+
+highlight MatchParen   cterm=bold      ctermfg=1     ctermbg=0
+highlight OverLength   cterm=none      ctermfg=1     ctermbg=0
+highlight Pmenu                                      ctermbg=8
+highlight PmenuSel     cterm=bold      ctermfg=10    ctermbg=4
+highlight PmenuThumb                   ctermfg=6
+highlight Search       cterm=none      ctermfg=0     ctermbg=3
+highlight StatusLine   cterm=bold      ctermfg=7     ctermbg=8
+highlight StatusLineNC cterm=none      ctermfg=0     ctermbg=8
+highlight ToDo         cterm=underline ctermfg=3     ctermbg=none
+
+autocmd WinEnter,BufRead * match OverLength /\%81v.\+/
 
 " Shortcuts
 map <C-k> <C-w>k
@@ -93,7 +109,8 @@ let g:syntastic_mode_map = { "mode": "active",
                            \ 'active_filetypes': ['go', 'haskell', 'ocaml',
                            \    'ruby', 'python', 'yaml',
                            \    'javascript', 'json', 'less',
-                           \    'puppet'] }
+                           \    'puppet'],
+                           \ 'passive_filetypes': [] }
 
 " Ack options
 map <Leader>a :Ack
