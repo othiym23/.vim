@@ -45,10 +45,7 @@ if has("autocmd")
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g`\"" |
     \ endif
-
 endif " has("autocmd")
-
-set expandtab
 
 " GUI customizations (anything that modifies fonts or windows directly should
 " go in ~/.gvimrc).
