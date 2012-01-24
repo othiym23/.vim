@@ -43,3 +43,6 @@
 [submodule "bundle/json"]
 	path = bundle/json
 	url = https://github.com/leshill/vim-json
+[submodule "bundle/fsouza-go"]
+	path = bundle/fsouza-go
+	url = https://github.com/fsouza/go.vim
