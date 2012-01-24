@@ -16,3 +16,6 @@
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
+[submodule "module/jshint"]
+	path = module/jshint
+	url = https://github.com/walm/jshint.vim
