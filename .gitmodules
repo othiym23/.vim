@@ -1,9 +1,6 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/wincent/Command-T
-[submodule "bundle/commentary"]
-	path = bundle/commentary
-	url = https://github.com/tpope/vim-commentary
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive
