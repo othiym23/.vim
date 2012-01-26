@@ -122,3 +122,11 @@ map <Leader>h :nohlsearch<CR>
 map <Leader>= :Tabularize /= <CR>
 map <Leader>> :Tabularize /=><CR>
 map <Leader>, :Tabularize /,\zs<CR>
+
+" NERDtree options
+"
+" open up a NERDtree at startup if there are no files provided (which is
+" almost always, given that mvim causes hangs on Lion.
+autocmd vimenter * if !argc() | NERDTree | endif
+" autoquit if NERDtree is the last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
