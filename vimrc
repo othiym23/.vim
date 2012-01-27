@@ -115,6 +115,9 @@ colorscheme solarized
 " Tasklist options
 map <Leader>T <Plug>TaskList
 
+" Haskell options
+let g:haddock_browser = "open"
+
 " Command-T options
 let g:CommandTMaxFiles = 30000
 let g:CommandTMaxHeight= 10
