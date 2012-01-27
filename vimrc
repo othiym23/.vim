@@ -65,6 +65,12 @@ highlight ToDo         cterm=underline ctermfg=3     ctermbg=none
 
 autocmd WinEnter,BufRead * match OverLength /\%81v.\+/
 
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
 " Shortcuts
 map <C-k> <C-w>k
 map <C-j> <C-w>j
