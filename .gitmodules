@@ -73,3 +73,6 @@
 [submodule "bundle/haskell"]
 	path = bundle/haskell
 	url = git@github.com:othiym23/haskellmode-vim.git
+[submodule "bundle/oz"]
+	path = bundle/oz
+	url = git@github.com:othiym23/oz.vim.git
