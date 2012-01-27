@@ -9,10 +9,11 @@ set backspace=indent,eol,start
 
 set autoindent
 set smartindent
-set nobackup		" do not keep a backup file -- let VCS take care of that
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
+set autowrite           " simplify dealing with buffers by auto-saving
+set nobackup            " do not keep a backup file -- let VCS take care of that
+set history=50          " keep 50 lines of command line history
+set ruler               " show the cursor position all the time
+set showcmd             " display incomplete commands
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -43,15 +44,15 @@ map <Leader>v :sp ~/.vimrc<CR><C-W>_
 map <silent> <Leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " Search
-set incsearch		" do incremental searching
+set incsearch           " do incremental searching
 set ignorecase          " ignore case in searches by default
 set smartcase           " case sensitive if you include upper case
 set hlsearch            " highlight last-used search pattern
 
 " UI
 set mouse=a             " On!
-set laststatus=2 	" always display status line
-set wildmenu 		" use enhanced command completion
+set laststatus=2        " always display status line
+set wildmenu            " use enhanced command completion
 
 highlight MatchParen   cterm=bold      ctermfg=1     ctermbg=0
 highlight OverLength   cterm=none      ctermfg=1     ctermbg=0
