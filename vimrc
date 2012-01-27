@@ -66,11 +66,19 @@ highlight ToDo         cterm=underline ctermfg=3     ctermbg=none
 
 autocmd WinEnter,BufRead * match OverLength /\%81v.\+/
 
-" Shortcut to rapidly toggle `set list`
+" Shortcut to rapidly toggle between showing and hiding invisible
+" character display.
 nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+
+" use some TextMate-style indentation mappings
+" http://vimcasts.org/episodes/indentation-commands/
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
 
 " Shortcuts
 map <C-k> <C-w>k
