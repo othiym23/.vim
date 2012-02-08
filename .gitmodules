@@ -79,3 +79,6 @@
 [submodule "bundle/puppet"]
 	path = bundle/puppet
 	url = git://github.com/rodjek/vim-puppet.git
+[submodule "bundle/jst"]
+	path = bundle/jst
+	url = https://github.com/briancollins/vim-jst
