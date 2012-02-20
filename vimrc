@@ -14,6 +14,7 @@ set autowrite           " simplify dealing with buffers by auto-saving
 set nobackup            " do not keep a backup file -- let VCS take care of that
 set history=50          " keep 50 lines of command line history
 set ruler               " show the cursor position all the time
+set number              " I like line numbers on by default
 set showcmd             " display incomplete commands
 
 " Don't use Ex mode, use Q for formatting
