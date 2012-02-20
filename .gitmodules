@@ -82,3 +82,6 @@
 [submodule "bundle/jst"]
 	path = bundle/jst
 	url = https://github.com/briancollins/vim-jst
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = https://github.com/tpope/vim-surround.git
