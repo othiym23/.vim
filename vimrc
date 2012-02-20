@@ -88,6 +88,17 @@ imap jj <Esc>
 map <Leader>p :set invpaste paste?<CR> " invert paste mode
 map <Leader>q /^\s*q\W<CR>
 
+" http://vimcasts.org/episodes/the-edit-command/
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <Leader>ew :e %%
+map <Leader>es :sp %%
+map <Leader>ev :vsp %%
+map <Leader>et :tabe %%
+
+" http://vimcasts.org/episodes/soft-wrapping-text/
+command! -nargs=* Wrap set wrap linebreak nolist
+set showbreak=…
+
 " Anti-shortcuts
 map <S-k> k<S-j>$
 map <S-y> y$
