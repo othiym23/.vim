@@ -1,4 +1,4 @@
-" ogd@aoaioxxysz.net / othiym23 / Forrest L Norvell's vimrc 2012/01/24
+" ogd@aoaioxxysz.net / othiym23 / Forrest L Norvell's vimrc 2012/02/19
 "
 " Use Vim settings, rather than Vi settings
 " This must be first, because it changes other options as a side effect.
@@ -56,6 +56,7 @@ set mouse=a             " On!
 set laststatus=2        " always display status line
 set wildmenu            " use enhanced command completion
 
+" highlighting settings grabbed from Kristján
 highlight MatchParen   cterm=bold      ctermfg=1     ctermbg=0
 highlight OverLength   cterm=none      ctermfg=1     ctermbg=0
 highlight Pmenu                                      ctermbg=8
