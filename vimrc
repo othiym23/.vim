@@ -41,7 +41,7 @@ if has("autocmd")
 endif
 
 " Mess with .vimrc
-map <Leader>v :sp ~/.vimrc<CR><C-W>_
+map <Leader>v :sp ~/.vim/vimrc<CR><C-W>_
 map <silent> <Leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " Search
