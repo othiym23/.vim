@@ -29,8 +29,8 @@ if has("autocmd")
   " a lot of the indentation controls have been moved to after/ftplugin/*.vim
   filetype plugin indent on
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
+  " When editing a file, always jump to the last known cursor position. Don't
+  " do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
   autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -39,8 +39,10 @@ if has("autocmd")
 endif
 
 " Mess with .vimrc
-map <Leader>v :sp ~/.vim/vimrc<CR><C-W>_
-map <silent> <Leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+map <Leader>v :tabedit ~/.vim/vimrc<CR>
+if has("autocmd")
+  autocmd! BufWritePost vimrc source $MYVIMRC
+endif
 
 " Search
 set incsearch           " do incremental searching
@@ -110,7 +112,9 @@ autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
 
 " Start by having Pathogen load the plugins.
-call pathogen#infect()
+if !exists("g:loaded_pathogen")
+  call pathogen#infect()
+endif
 
 " Solarized is set up as a plugin
 set background=dark
