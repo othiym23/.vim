@@ -73,14 +73,7 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
-" use some TextMate-style indentation mappings
-" http://vimcasts.org/episodes/indentation-commands/
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
-
-" Shortcuts
+" window shortcuts
 map <C-k> <C-w>k
 map <C-j> <C-w>j
 map <C-l> <C-w>l
