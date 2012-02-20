@@ -50,6 +50,15 @@ if has("autocmd")
   autocmd! BufWritePost vimrc source $MYVIMRC
 endif
 
+" Show syntax highlighting groups for word under cursor
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 " Search
 set incsearch           " do incremental searching
 set ignorecase          " ignore case in searches by default
