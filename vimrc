@@ -9,6 +9,7 @@ set backspace=indent,eol,start
 
 set autoindent
 set smartindent
+set hidden              " allow movement between dirty buffers
 set autowrite           " simplify dealing with buffers by auto-saving
 set nobackup            " do not keep a backup file -- let VCS take care of that
 set history=50          " keep 50 lines of command line history
