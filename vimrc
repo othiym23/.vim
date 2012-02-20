@@ -4,6 +4,12 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" Start by having Pathogen load any external bundles
+if !exists("g:loaded_pathogen")
+  call pathogen#runtime_append_all_bundles()
+  call pathogen#helptags()
+endif
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -110,11 +116,6 @@ autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 " PLUGIN CONFIGURATION
 "
 
-
-" Start by having Pathogen load the plugins.
-if !exists("g:loaded_pathogen")
-  call pathogen#infect()
-endif
 
 " Solarized is set up as a plugin
 set background=dark
