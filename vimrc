@@ -134,6 +134,12 @@ colorscheme solarized
 " Tasklist options
 map <Leader>T <Plug>TaskList
 
+" vimwiki options
+let default_wiki = {}
+let default_wiki.path = '~/Dropbox/vimwiki'
+let default_wiki.path_html = '~/Dropbox/vimwiki/html'
+let g:vimwiki_list = [default_wiki]
+
 " Haskell options
 let g:haddock_browser = "open"
 
