@@ -120,6 +120,19 @@ map <S-y> y$
 autocmd VimEnter COMMIT_EDITMSG :call cursor(1,1)
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
+" https://gist.github.com/2054996
+"
+" Human-readable long epoch dates (long meaning those that include milliseconds)
+function! DateFromLongEpoch()
+  " Let the shell divide because vim only supports 32 bit ints
+  let sdate=system("echo $((". expand("<cword>") ."/1000))")
+  " Format the date
+  let human=tolower(substitute(strftime("%m/%d/%y %I:%M:%S%p", sdate), "\\\<0", "", "g"))
+
+  return human ." (". (sdate - localtime()) ." seconds from now)"
+endfunc
+
+map <Leader>j :echo DateFromLongEpoch()<CR>
 
 "
 " PLUGIN CONFIGURATION
