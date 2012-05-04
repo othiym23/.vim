@@ -158,15 +158,15 @@ let g:haddock_browser = "open"
 
 " Command-T options
 let g:CommandTMaxFiles = 30000
-let g:CommandTMaxHeight= 10
+let g:CommandTMaxHeight = 10
 map <Leader>F :CommandTFlush<CR>
 
 " Gundo options
 nnoremap <F5> :GundoToggle<CR>
 
 " Syntastic options
-let g:syntastic_auto_loc_list=1
-let g:syntastic_javascript_checker='jshint'
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_javascript_checker = 'jshint'
 let g:syntastic_mode_map = { "mode": "active",
                            \ 'active_filetypes': ['go', 'haskell', 'ocaml',
                            \    'ruby', 'python', 'yaml',
