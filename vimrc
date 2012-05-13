@@ -23,9 +23,6 @@ set ruler               " show the cursor position all the time
 set number              " I like line numbers on by default
 set showcmd             " display incomplete commands
 
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
 " Switch syntax highlighting on, when the terminal has colors
 if &t_Co > 2 || has("gui_running")
   syntax on
@@ -114,8 +111,10 @@ command! -nargs=* Wrap set wrap linebreak nolist
 set showbreak=…
 
 " Anti-shortcuts
-map <S-k> k<S-j>$
-map <S-y> y$
+map K k<S-j>$
+" Don't use Ex mode, use Q for formatting
+map Q gq
+map Y y$
 
 autocmd VimEnter COMMIT_EDITMSG :call cursor(1,1)
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
