@@ -43,9 +43,6 @@
 [submodule "bundle/fsouza-go"]
 	path = bundle/fsouza-go
 	url = https://github.com/fsouza/go.vim
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter
 [submodule "bundle/jquery"]
 	path = bundle/jquery
 	url = https://github.com/vim-scripts/jQuery
@@ -100,3 +97,6 @@
 [submodule "bundle/extradite"]
 	path = bundle/extradite
 	url = https://github.com/int3/vim-extradite
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = https://github.com/tpope/vim-commentary
