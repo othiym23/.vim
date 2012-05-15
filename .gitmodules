@@ -100,3 +100,6 @@
 [submodule "bundle/auto-pairs"]
 	path = bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
+[submodule "resources/snipmate-nodejs"]
+	path = resources/snipmate-nodejs
+	url = git://github.com/jamescarr/snipmate-nodejs.git
