@@ -141,9 +141,12 @@ map <Leader>j :echo DateFromLongEpoch()<CR>
 
 " Solarized is set up as a plugin
 set background=dark
-let g:solarized_termcolors=256
+let g:solarized_termcolors = 256
 colorscheme solarized
 
+" Powerline has almost too much configuration
+let g:Powerline_symbols = 'unicode'
+let g:Powerline_colorscheme = 'skwp'
 " Tasklist options
 map <Leader>T <Plug>TaskList
 
