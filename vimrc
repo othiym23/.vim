@@ -18,7 +18,7 @@ set smartindent
 set hidden              " allow movement between dirty buffers
 set autowrite           " simplify dealing with buffers by auto-saving
 set nobackup            " do not keep a backup file -- let VCS take care of that
-set history=1000        " keep 50 lines of command line history
+set history=1000        " populate viminfo with command history
 set ruler               " show the cursor position all the time
 set number              " I like line numbers on by default
 set showcmd             " display incomplete commands
