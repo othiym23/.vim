@@ -106,3 +106,7 @@
 [submodule "bundle/camel-case-motion"]
 	path = bundle/camel-case-motion
 	url = https://github.com/bkad/CamelCaseMotion.git
+	url = git://github.com/jamescarr/snipmate-nodejs.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar

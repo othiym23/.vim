@@ -167,6 +167,9 @@ map <Leader>F :CommandTFlush<CR>
 " Gundo options
 nnoremap <F5> :GundoToggle<CR>
 
+" Tagbar options
+nnoremap <F8> :TagbarToggle<CR>
+
 " Syntastic options
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checker = 'jshint'
