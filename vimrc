@@ -95,7 +95,7 @@ map <C-l> <C-w>l
 map <C-h> <C-w>h
 
 " my poor pinkies need a break
-imap jj <Esc>
+inoremap jj <Esc>
 
 map <Leader>p :set invpaste paste?<CR> " invert paste mode
 map <Leader>q /^\s*q\W<CR>
