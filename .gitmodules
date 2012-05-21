@@ -103,3 +103,6 @@
 [submodule "bundle/tcomment"]
 	path = bundle/tcomment
 	url = https://github.com/vim-scripts/tComment
+[submodule "bundle/camel-case-motion"]
+	path = bundle/camel-case-motion
+	url = https://github.com/bkad/CamelCaseMotion.git
