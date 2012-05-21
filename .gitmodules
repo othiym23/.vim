@@ -102,4 +102,4 @@
 	url = https://github.com/jiangmiao/auto-pairs
 [submodule "resources/snipmate-nodejs"]
 	path = resources/snipmate-nodejs
-	url = git://github.com/jamescarr/snipmate-nodejs.git
+	url = git@github.com:othiym23/snipmate-nodejs.git
