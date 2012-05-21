@@ -3,13 +3,13 @@ set -e
 
 cd ~
 
-if [ X".vim/vimrc" != `stat -f '%Y' ~/.vimrc` ]
+if [ ".vim/vimrc" != `stat -f '%Y' ~/.vimrc` ]
 then
     mv .vimrc .vimrc-
     ln -sf .vim/vimrc .vimrc
 fi
 
-if [ X".vim/gvimrc" != `stat -f '%Y' ~/.gvimrc` ]
+if [ ".vim/gvimrc" != `stat -f '%Y' ~/.gvimrc` ]
 then
     mv .gvimrc .gvimrc-
     ln -sf .vim/gvimrc .gvimrc
@@ -27,5 +27,8 @@ mkdir -p snippets/javascript
 cd snippets/javascript
 for snippet in ../../resources/snipmate-nodejs/snippets/javascript/*.snippet
 do
-    ln -s $snippet .
+    if [ ! -e `basename $snippet` ]
+    then
+        ln -s $snippet .
+    fi
 done
