@@ -94,12 +94,12 @@
 [submodule "bundle/extradite"]
 	path = bundle/extradite
 	url = https://github.com/int3/vim-extradite
-[submodule "bundle/commentary"]
-	path = bundle/commentary
-	url = https://github.com/tpope/vim-commentary
 [submodule "bundle/auto-pairs"]
 	path = bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
 [submodule "resources/snipmate-nodejs"]
 	path = resources/snipmate-nodejs
 	url = git@github.com:othiym23/snipmate-nodejs.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = https://github.com/vim-scripts/tComment
