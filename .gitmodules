@@ -110,3 +110,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
+[submodule "bundle/jade"]
+	path = bundle/jade
+	url = https://github.com/digitaltoad/vim-jade.git
