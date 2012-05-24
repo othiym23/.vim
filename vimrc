@@ -169,6 +169,20 @@ nnoremap <F5> :GundoToggle<CR>
 
 " Tagbar options
 nnoremap <F8> :TagbarToggle<CR>
+" jsctags isn't ready, and ctags needs help
+let g:tagbar_type_javascript = {
+  \ 'ctagstype' : 'javascript',
+  \ 'replace'   : 1,
+  \ 'kinds'     : [
+  \   'e:exports',
+  \   'v:global variables',
+  \   'C:constants',
+  \   'c:classes',
+  \   'm:methods',
+  \   'f:functions',
+  \   'p:properties'
+  \ ]
+  \ }
 
 " Syntastic options
 let g:syntastic_auto_loc_list = 1
