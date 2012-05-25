@@ -8,20 +8,22 @@ preserve_config () {
 
     local stat_output=''
 
-    if stat --version > /dev/null 2>&1 && \
-       stat --version 2>&1 | grep -q GNU
+    if [ -e "${target}" ]
     then
-        # GNU stat
-        echo 'GNU stat'
-        stat_output=$(stat -c '%N' "${target}" | sed "s/^.* -> \`\(.*\)'$/\1/")
-    else
-        # for now, just assume we're on a BSD-like system
-        stat_output=$(stat -f '%Y' "${target}")
-    fi
+        if stat --version > /dev/null 2>&1 && \
+            stat --version 2>&1 | grep -q GNU
+        then
+            # GNU stat
+            stat_output=$(stat -c '%N' "${target}" | sed "s/^.* -> \`\(.*\)'$/\1/")
+        else
+            # for now, just assume we're on a BSD-like system
+            stat_output=$(stat -f '%Y' "${target}")
+        fi
 
-    if [ -e "${target}" -a X"${source}" != X"${stat_output}" ]
-    then
-        mv "${target}" "${target}-"
+        if [ -e "${target}" -a X"${source}" != X"${stat_output}" ]
+        then
+            mv "${target}" "${target}-"
+        fi
     fi
 
     if [ ! -e "${target}" ]
