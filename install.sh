@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -41,7 +41,7 @@ then
 elif type apt-get &> /dev/null && ! dpkg -s exuberant-ctags &> /dev/null
 then
     echo "Installing Exuberant ctags via apt-get (will need your password)."
-    sudo apt-get install exuberant-ctags
+    sudo apt-get install exuberant-ctags > /dev/null
 fi
 
 if type cabal &> /dev/null && ! cabal info lushtags &> /dev/null
@@ -73,6 +73,7 @@ echo "Setting up Command-T."
 
 if ! type rvm &>/dev/null
 then
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
     rvm use system
 fi
 
