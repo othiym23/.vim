@@ -34,6 +34,25 @@ preserve_config () {
 
 cd ~
 
+if type brew &> /dev/null && brew info ctags | grep -q 'Not installed'
+then
+    echo "Installing Exuberant ctags via Homebrew."
+    brew install ctags > /dev/null
+elif type apt-get &> /dev/null && ! dpkg -s exuberant-ctags &> /dev/null
+then
+    echo "Installing Exuberant ctags via apt-get (will need your password)."
+    sudo apt-get install exuberant-ctags
+fi
+
+if type cabal &> /dev/null && ! cabal info lushtags &> /dev/null
+then
+    echo "Installing lushtags via cabal."
+    cabal update > /dev/null
+    cabal install lushtags > /dev/null
+fi
+
+echo "Setting up configuration file links."
+
 # Set up .vimrc, preserving the existing one
 preserve_config ".vimrc" ".vim/vimrc"
 # ...same goes for .gvimrc...
@@ -43,14 +62,29 @@ preserve_config ".ctags" ".vim/resources/ctags.conf"
 
 cd ~/.vim
 
-# make sure that submodules are correctly configured
-git submodule init
-git submodule sync
-git submodule update
+echo "Checking out submodules."
 
-# set up snippets
-mkdir -p snippets/javascript
-cd snippets/javascript
+# make sure that submodules are correctly configured
+git submodule init > /dev/null
+git submodule sync > /dev/null
+git submodule update > /dev/null
+
+echo "Setting up Command-T."
+
+if ! type rvm &>/dev/null
+then
+    rvm use system
+fi
+
+cd ~/.vim/bundle/command-t/ruby/command-t
+
+ruby extconf.rb > /dev/null
+make > /dev/null
+
+echo "Setting up custom snipMate snippets."
+
+mkdir -p ~/.vim/snippets/javascript
+cd ~/.vim/snippets/javascript
 for snippet in ../../resources/snipmate-nodejs/snippets/javascript/*.snippet
 do
     if [ ! -e `basename $snippet` ]

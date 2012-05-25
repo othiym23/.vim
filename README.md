@@ -1,17 +1,10 @@
 ## Requirements
 
-* Command-T requires a Vim compiled with Ruby support (after installation,
-
-```bash
-rvm use system
-cd bundle/command-t/ruby && ruby extconf.rb && make
-```
-
-).
-* Exuberant ctags for tagbar support (or you can try installing [my fork of
-  jsctags](https://github.com/othiym23/doctorjs), which works reasonably well
-  with Node.js 0.6.x and tagbar).
-* lushtags for Haskell support: `cabal install lushtags`.
+* Command-T requires a Vim compiled with Ruby support.
+* Tagbar uses exuberant-ctags. The installer will install it for Homebrew on OS
+  X and on Debian-like systems (potentially including Fink).
+* Tagbar is also configured to use lushtags for Haskell code. If the Haskell
+  Platform and cabal are installed, the installer script will install it.
 
 ## Setup
 
