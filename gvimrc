@@ -1,7 +1,11 @@
-set gfn=Consolas:h11
 set lines=40 columns=140
-set fuopt=maxvert,maxhorz
 set guioptions-=T
+if has("gui_macvim")
+  set fuopt=maxvert,maxhorz
+  set guifont=Consolas:h11
+elseif has("gui_gtk2")
+  set guifont=Ubuntu\ Mono\ 12
+end
 
 " use some TextMate-style indentation mappings
 " http://vimcasts.org/episodes/indentation-commands/
