@@ -1,9 +1,9 @@
 ## Requirements
 
 * Command-T requires a Vim compiled with Ruby support (after installation,
-
-    cd bundle/command-t/ruby && ruby extconf.rb && make
-
+```shell
+cd bundle/command-t/ruby && ruby extconf.rb && make
+```
 ).
 * Exuberant ctags for tagbar support (or you can try installing [my fork of
   jsctags](https://github.com/othiym23/doctorjs), which works reasonably well
