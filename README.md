@@ -1,7 +1,8 @@
 ## Requirements
 
 * Command-T requires a Vim compiled with Ruby support (after installation,
-```shell
+```bash
+rvm use system
 cd bundle/command-t/ruby && ruby extconf.rb && make
 ```
 ).
