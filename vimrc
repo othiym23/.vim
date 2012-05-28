@@ -88,6 +88,9 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+" hey, paste mode!
+set pastetoggle=<F2>
+
 " window shortcuts
 map <C-k> <C-w>k
 map <C-j> <C-w>j
