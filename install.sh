@@ -20,7 +20,7 @@ preserve_config () {
             stat_output=$(stat -f '%Y' "${target}")
         fi
 
-        if [ -e "${target}" -a X"${source}" != X"${stat_output}" ]
+        if [ X"${source}" != X"${stat_output}" ]
         then
             mv "${target}" "${target}-"
         fi
