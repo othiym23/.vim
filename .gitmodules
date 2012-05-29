@@ -112,3 +112,6 @@
 [submodule "bundle/jade"]
 	path = bundle/jade
 	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "bundle/visual-star-search"]
+	path = bundle/visual-star-search
+	url = https://github.com/nelstrom/vim-visual-star-search
