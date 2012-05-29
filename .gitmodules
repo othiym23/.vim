@@ -118,3 +118,6 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish
+[submodule "bundle/qargs"]
+	path = bundle/qargs
+	url = https://github.com/nelstrom/vim-qargs
