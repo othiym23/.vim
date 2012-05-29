@@ -86,9 +86,6 @@ nmap <Leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
-" hey, paste mode!
-set pastetoggle=<F2>
-
 " window shortcuts
 map <C-k> <C-w>k
 map <C-j> <C-w>j
@@ -98,7 +95,8 @@ map <C-h> <C-w>h
 " my poor pinkies need a break
 inoremap jj <Esc>
 
-map <Leader>p :set invpaste paste?<CR> " invert paste mode
+" hey, paste mode!
+set pastetoggle=<F2>
 map <Leader>q /^\s*q\W<CR>
 
 " http://vimcasts.org/episodes/the-edit-command/
