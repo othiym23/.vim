@@ -231,8 +231,9 @@ map <Leader>c :ccl<CR>:lcl<CR> " clean up Quicklist and Location windows
 " search shortcuts
 " (for some reason these have to go after Ack configuration)
 "
-" from Practical Vim: override Ctrl-L (screen refresh) with highlight muting
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+" from Practical Vim: make \h do a souped-up screen refresh.
+" Don't replace ctrl-l, because I'm using that for window navigation.
+nnoremap <silent> <Leader>h :<C-u>nohlsearch<CR><C-l>
 " also from Practical Vim: & will repeat the previous search with the same
 " options, and will aslo work in visual mode
 nnoremap & :&&<CR>
