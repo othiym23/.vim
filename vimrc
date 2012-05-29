@@ -83,7 +83,7 @@ autocmd WinEnter,BufRead * match OverLength /\%81v.\+/
 
 " Shortcut to rapidly toggle between showing and hiding invisible
 " character display.
-nmap <leader>l :set list!<CR>
+nmap <Leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
