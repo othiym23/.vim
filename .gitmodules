@@ -121,3 +121,6 @@
 [submodule "bundle/qargs"]
 	path = bundle/qargs
 	url = https://github.com/nelstrom/vim-qargs
+[submodule "bundle/coffeescript"]
+	path = bundle/coffeescript
+	url = https://github.com/kchmck/vim-coffee-script
