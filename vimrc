@@ -43,9 +43,6 @@ endif
 
 " Mess with .vimrc
 map <Leader>v :tabedit ~/.vim/vimrc<CR>
-if has("autocmd")
-  autocmd! BufWritePost vimrc source $MYVIMRC
-endif
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
