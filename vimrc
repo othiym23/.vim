@@ -235,7 +235,7 @@ map <Leader>c :ccl<CR>:lcl<CR> " clean up Quicklist and Location windows
 map <Leader>h :nohlsearch<CR>
 
 " Tabularize options
-map <Leader>= :Tabularize /= <CR>
+map <Leader>= :Tabularize /=<CR>
 map <Leader>> :Tabularize /=><CR>
 map <Leader>, :Tabularize /,\zs<CR>
 
