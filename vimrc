@@ -60,6 +60,7 @@ endfunc
 set incsearch           " do incremental searching
 set ignorecase          " ignore case in searches by default
 set smartcase           " case sensitive if you include upper case
+set infercase           " fix completion to work the same as search + smartcase
 set hlsearch            " highlight last-used search pattern
 
 " UI
