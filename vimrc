@@ -232,7 +232,16 @@ let g:syntastic_mode_map = { "mode": "active",
 map <Leader>a :Ack
 map <Leader>A "zyw:exe ":Ack ".@z<CR>
 map <Leader>c :ccl<CR>:lcl<CR> " clean up Quicklist and Location windows
-map <Leader>h :nohlsearch<CR>
+
+" search shortcuts
+" (for some reason these have to go after Ack configuration)
+"
+" from Practical Vim: override Ctrl-L (screen refresh) with highlight muting
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+" also from Practical Vim: & will repeat the previous search with the same
+" options, and will aslo work in visual mode
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
 
 " Tabularize options
 map <Leader>= :Tabularize /=<CR>
