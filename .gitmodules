@@ -124,3 +124,6 @@
 [submodule "bundle/smartinput"]
 	path = bundle/smartinput
 	url = https://github.com/kana/vim-smartinput
+[submodule "bundle/vimregex-tester"]
+	path = bundle/vimregex-tester
+	url = git://github.com/Raimondi/VimRegEx.vim.git
