@@ -127,3 +127,6 @@
 [submodule "bundle/vimregex-tester"]
 	path = bundle/vimregex-tester
 	url = https://github.com/Raimondi/VimRegEx.vim.git
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = https://github.com/rstacruz/sparkup.git
