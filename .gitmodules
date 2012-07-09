@@ -1,81 +1,81 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
-	url = https://github.com/wincent/Command-T
+	url = https://github.com/wincent/Command-T.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = https://github.com/tpope/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/gist"]
 	path = bundle/gist
-	url = https://github.com/mattn/gist-vim
+	url = https://github.com/mattn/gist-vim.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
-	url = https://github.com/vim-scripts/Gundo
+	url = https://github.com/vim-scripts/Gundo.git
 [submodule "bundle/javascript"]
 	path = bundle/javascript
-	url = https://github.com/pangloss/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
 [submodule "bundle/jshint"]
 	path = bundle/jshint
-	url = https://github.com/walm/jshint.vim
+	url = https://github.com/walm/jshint.vim.git
 [submodule "bundle/less"]
 	path = bundle/less
-	url = https://github.com/groenewege/vim-less
+	url = https://github.com/groenewege/vim-less.git
 [submodule "bundle/colors-solarized"]
 	path = bundle/colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/powerline"]
 	path = bundle/powerline
-	url = https://github.com/Lokaltog/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/repeat"]
 	path = bundle/repeat
-	url = https://github.com/tpope/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim
+	url = https://github.com/msanders/snipmate.vim.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
-	url = https://github.com/tsaleh/vim-supertab
+	url = https://github.com/tsaleh/vim-supertab.git
 [submodule "bundle/tasklist"]
 	path = bundle/tasklist
-	url = https://github.com/vim-scripts/TaskList.vim
+	url = https://github.com/vim-scripts/TaskList.vim.git
 [submodule "bundle/json"]
 	path = bundle/json
-	url = https://github.com/leshill/vim-json
+	url = https://github.com/leshill/vim-json.git
 [submodule "bundle/fsouza-go"]
 	path = bundle/fsouza-go
-	url = https://github.com/fsouza/go.vim
+	url = https://github.com/fsouza/go.vim.git
 [submodule "bundle/jquery"]
 	path = bundle/jquery
-	url = https://github.com/vim-scripts/jQuery
+	url = https://github.com/vim-scripts/jQuery.git
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
-	url = https://github.com/Lokaltog/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/ack"]
 	path = bundle/ack
-	url = https://github.com/mileszs/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
-	url = https://github.com/godlygeek/tabular
+	url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/markdown"]
 	path = bundle/markdown
-	url = https://github.com/tpope/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/haskell"]
 	path = bundle/haskell
-	url = git@github.com:othiym23/haskellmode-vim.git
+	url = https://github.com/othiym23/haskellmode-vim.git
 [submodule "bundle/oz"]
 	path = bundle/oz
-	url = git@github.com:othiym23/oz.vim.git
+	url = https://github.com/othiym23/oz.vim.git
 [submodule "bundle/puppet"]
 	path = bundle/puppet
-	url = git://github.com/rodjek/vim-puppet.git
+	url = https://github.com/rodjek/vim-puppet.git
 [submodule "bundle/jst"]
 	path = bundle/jst
-	url = https://github.com/briancollins/vim-jst
+	url = https://github.com/briancollins/vim-jst.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
@@ -87,40 +87,43 @@
 	url = https://github.com/vim-scripts/vimwiki.git
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
-	url = https://github.com/tpope/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/keepcase"]
 	path = bundle/keepcase
-	url = https://github.com/vim-scripts/keepcase.vim
+	url = https://github.com/vim-scripts/keepcase.vim.git
 [submodule "bundle/extradite"]
 	path = bundle/extradite
-	url = https://github.com/int3/vim-extradite
+	url = https://github.com/int3/vim-extradite.git
 [submodule "resources/snipmate-nodejs"]
 	path = resources/snipmate-nodejs
-	url = git@github.com:othiym23/snipmate-nodejs.git
+	url = https://github.com/othiym23/snipmate-nodejs.git
 [submodule "bundle/tcomment"]
 	path = bundle/tcomment
-	url = https://github.com/vim-scripts/tComment
+	url = https://github.com/vim-scripts/tComment.git
 [submodule "bundle/camel-case-motion"]
 	path = bundle/camel-case-motion
 	url = https://github.com/bkad/CamelCaseMotion.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
-	url = https://github.com/majutsushi/tagbar
+	url = https://github.com/majutsushi/tagbar.git
 [submodule "bundle/jade"]
 	path = bundle/jade
 	url = https://github.com/digitaltoad/vim-jade.git
 [submodule "bundle/visual-star-search"]
 	path = bundle/visual-star-search
-	url = https://github.com/nelstrom/vim-visual-star-search
+	url = https://github.com/nelstrom/vim-visual-star-search.git
 [submodule "bundle/abolish"]
 	path = bundle/abolish
-	url = https://github.com/tpope/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
 [submodule "bundle/qargs"]
 	path = bundle/qargs
-	url = https://github.com/nelstrom/vim-qargs
+	url = https://github.com/nelstrom/vim-qargs.git
 [submodule "bundle/coffeescript"]
 	path = bundle/coffeescript
-	url = https://github.com/kchmck/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/smartinput"]
 	path = bundle/smartinput
-	url = https://github.com/kana/vim-smartinput
+	url = https://github.com/kana/vim-smartinput.git
+[submodule "bundle/vimregex-tester"]
+	path = bundle/vimregex-tester
+	url = https://github.com/Raimondi/VimRegEx.vim.git
