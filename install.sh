@@ -79,8 +79,18 @@ fi
 
 cd ~/.vim/bundle/command-t/ruby/command-t
 
+if type rbenv &>/dev/null
+then
+    rbenv local system
+fi
+
 ruby extconf.rb > /dev/null
 make > /dev/null
+
+if type rbenv &>/dev/null
+then
+    rm .rbenv-version
+fi
 
 echo "Setting up custom snipMate snippets."
 
