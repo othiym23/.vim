@@ -67,7 +67,7 @@ echo "Checking out submodules."
 # make sure that submodules are correctly configured
 git submodule init > /dev/null
 git submodule sync > /dev/null
-git submodule update > /dev/null
+git submodule update --init > /dev/null
 
 echo "Setting up Command-T."
 
