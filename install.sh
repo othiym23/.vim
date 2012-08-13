@@ -71,7 +71,7 @@ git submodule update --init > /dev/null
 
 echo "Setting up Command-T."
 
-if ! type rvm &>/dev/null
+if type rvm &>/dev/null
 then
     [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
     rvm use system
