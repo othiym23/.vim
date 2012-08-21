@@ -67,11 +67,11 @@ echo "Checking out submodules."
 # make sure that submodules are correctly configured
 git submodule init > /dev/null
 git submodule sync > /dev/null
-git submodule update > /dev/null
+git submodule update --init > /dev/null
 
 echo "Setting up Command-T."
 
-if ! type rvm &>/dev/null
+if type rvm &>/dev/null
 then
     [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
     rvm use system
@@ -79,8 +79,18 @@ fi
 
 cd ~/.vim/bundle/command-t/ruby/command-t
 
+if type rbenv &>/dev/null
+then
+    rbenv local system
+fi
+
 ruby extconf.rb > /dev/null
 make > /dev/null
+
+if type rbenv &>/dev/null
+then
+    rm .rbenv-version
+fi
 
 echo "Setting up custom snipMate snippets."
 
