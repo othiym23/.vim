@@ -115,6 +115,7 @@ map K k<S-j>$
 " Don't use Ex mode, use Q for formatting
 map Q gq
 map Y y$
+map <F1> :echo "F1 is for racing"<CR>
 
 autocmd VimEnter COMMIT_EDITMSG :call cursor(1,1)
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
