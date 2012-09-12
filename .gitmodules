@@ -139,3 +139,6 @@
 [submodule "bundle/otf"]
 	path = bundle/otf
 	url = https://github.com/vim-scripts/otf.vim
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = https://github.com/tristen/vim-sparkup
