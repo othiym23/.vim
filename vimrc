@@ -146,7 +146,7 @@ colorscheme solarized
 
 " Powerline has almost too much configuration
 let g:Powerline_symbols = 'unicode'
-let g:Powerline_colorscheme = 'skwp'
+let g:Powerline_colorscheme = 'solarized256'
 
 " Tasklist options
 map <Leader>T <Plug>TaskList
