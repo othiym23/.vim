@@ -139,3 +139,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "bundle/fsharp"]
+	path = bundle/fsharp
+	url = https://github.com/kongo2002/fsharp-vim
