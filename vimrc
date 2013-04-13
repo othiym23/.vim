@@ -149,10 +149,9 @@ let g:Powerline_symbols = 'unicode'
 let g:Powerline_colorscheme = 'solarized256'
 
 " UltiSnips options
-let g:UltiSnipsSnippetDirectories=["UltiSnips"]
-let g:UltiSnipsSnippetDirectories+=["~/.vim/snippets"]
-let g:UltiSnipsSnippetDirectories+=["bundle/snippets/UltiSnips"]
-let g:UltiSnipsSnippetsDir="~/.vim/snippets"
+let g:UltiSnipsSnippetsDir = "~/.vim/resources/snippets"
+" override plugin's included snippets, and include my own
+let g:UltiSnipsSnippetDirectories = ["bundle/snippets/UltiSnips", "resources/snippets"]
 
 " Tasklist options
 map <Leader>T <Plug>TaskList

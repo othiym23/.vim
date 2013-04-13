@@ -1,3 +1,5 @@
+clearsnippets
+
 snippet after "after"
 after(function (done) {
   ${1:}
@@ -92,12 +94,12 @@ snippet express "express"
 var app = express.createServer();
 
 app.configure(function () {
-  app.set('views', __dirname + '${1:/../views}');
+  app.set('views', path.join(__dirname, '${1:views}'));
   ${2:app.use(connect.bodyDecoder());}
   ${3:app.use(connect.methodOverride());}
-  app.use(connect.compiler({src : __dirname + '/../public', enable : ['less']}));
+  app.use(connect.compiler({src : path.join(__dirname, '..', 'public'), enable : ['less']}));
   app.use(app.router);
-  app.use(connect.staticProvider(__dirname + '${4:/../public'}));
+  app.use(connect.staticProvider(path.join(__dirname, ${4:'..', 'public'})));
 });
 
 app.configure('development', function () {
@@ -116,9 +118,9 @@ filter(function (item) {
 endsnippet
 
 snippet forE "forE"
-forEach(function (${1:item}, ${2:index}) {
-  ${3:}
-});
+forEach(function (${1:item}${2:, ${3:index}}) {
+  ${4:}
+}${5:, this});
 endsnippet
 
 snippet fs.readFile "fs.readFile"
@@ -193,19 +195,31 @@ endsnippet
 
 snippet net.createServer "net.createServer"
 net.createServer(function (${1:socket}) {
-  $1.setEncoding("${2:utf8}");
+  $1.setEncoding('${2:utf8}');
   $1.on('data', function (data) {
-
+    $3
   });
   $1.on('end', function () {
-
+    $4
   });
-}).listen(${3:8124}, '${4:127.0.0.1}');
+}).listen(${5:3000}, '${6:127.0.0.1}');
 endsnippet
 
 snippet on "on"
 on('${1:eventname}', function (${2:err, res}) {
   ${3:}
+});
+endsnippet
+
+snippet domcreate "create a domain"
+var ${1:d} = domain.create();
+
+$1.on('error', function (${4:error}) {
+  $2
+});
+
+$1.run(function () {
+  $3
 });
 endsnippet
 
@@ -287,3 +301,70 @@ endsnippet
 snippet writeHead "writeHead"
 writeHead(${1:200}, ${2:{'Content-Type':'text/plain'}});
 endsnippet
+
+snippet '':f "object method string"
+'${1:${2:#thing}:${3:click}}' : function (element) {
+  $0
+}${10:,}
+endsnippet
+
+snippet :f "Object Method"
+${1:method_name} : function (${3:attribute}) {
+  $0
+}${10:,}
+endsnippet
+
+snippet :, "Object Value JS"
+${1:value_name} : ${0:value},
+endsnippet
+
+snippet : "Object key key: 'value'"
+${1:key} : ${2:"${3:value}"}${4:, }
+endsnippet
+
+snippet for "for (...) {...} (faster)"
+for (var ${2:i} = ${1:Things}.length - 1; $2 >= 0; $2--){
+  ${3:$1[$2]}$0
+}
+endsnippet
+
+snippet for "for (...) {...}"
+for (var ${2:i}=0; $2 < ${1:Things}.length; $2++) {
+  ${3:$1[$2]}$0
+}
+endsnippet
+
+snippet fun "function (fun)"
+function ${1:function_name} (${2:argument}) {
+  ${0:// body...}
+}
+endsnippet
+
+snippet ife "if ___ else"
+if (${0:true}) {
+  $0
+}
+else {
+  $2
+}
+endsnippet
+
+snippet if "if"
+if (${1:true}) {
+  $0
+}
+endsnippet
+
+snippet timeout "setTimeout function"
+setTimeout(function() {
+  $0
+}${2:}, ${1:10});
+endsnippet
+
+snippet proto "Prototype (proto)"
+${1:class}.prototype.${2:method} = function (${3:argument}) {
+  ${0:// body...}
+};
+endsnippet
+
+# vim:ft=snippets:
