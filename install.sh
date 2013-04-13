@@ -89,17 +89,5 @@ make > /dev/null
 
 if type rbenv &>/dev/null
 then
-    rm .rbenv-version
+    rm .ruby-version
 fi
-
-echo "Setting up custom snipMate snippets."
-
-mkdir -p ~/.vim/snippets/javascript
-cd ~/.vim/snippets/javascript
-for snippet in ../../resources/snipmate-nodejs/snippets/javascript/*.snippet
-do
-    if [ ! -e `basename $snippet` ]
-    then
-        ln -s $snippet .
-    fi
-done

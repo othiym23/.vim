@@ -148,6 +148,12 @@ colorscheme solarized
 let g:Powerline_symbols = 'unicode'
 let g:Powerline_colorscheme = 'solarized256'
 
+" UltiSnips options
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:UltiSnipsSnippetDirectories+=["~/.vim/snippets"]
+let g:UltiSnipsSnippetDirectories+=["bundle/snippets/UltiSnips"]
+let g:UltiSnipsSnippetsDir="~/.vim/snippets"
+
 " Tasklist options
 map <Leader>T <Plug>TaskList
 

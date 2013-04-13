@@ -1,0 +1,289 @@
+snippet after "after"
+after(function (done) {
+  ${1:}
+
+  return done();
+});
+endsnippet
+
+snippet afterE "afterE"
+afterEach(function (done) {
+  ${1:}
+
+  return done();
+});
+endsnippet
+
+snippet before "before"
+before(function (done) {
+  ${1:}
+
+  return done();
+});
+endsnippet
+
+snippet beforeE "beforeE"
+beforeEach(function (done) {
+  ${1:}
+
+  return done();
+});
+endsnippet
+
+snippet desc "desc"
+describe("${1:description}", function () {
+  ${2:}
+});
+endsnippet
+
+snippet it "it"
+it("should ${1:spec}", function (done) {
+  ${3:}
+
+  ${2:return done();}
+});
+endsnippet
+
+snippet addLis "addLis"
+addListener('${1:event}', function (${2:}) {
+  ${3:}
+});
+endsnippet
+
+snippet app.get "app.get"
+app.get('${1:path}', function (req, res, next) {
+  ${2:}
+});
+endsnippet
+
+snippet app.listen "app.listen"
+app.listen(${1:3000}, ${2:function () {
+  console.log("App server listening on port %d", app.address().port);
+}});
+endsnippet
+
+snippet app.post "app.post"
+app.post('${1:path}', function (req, res, next) {
+  ${2:}
+});
+endsnippet
+
+snippet assert.notE "assert.notE"
+assert.notEqual(${1:actual}, ${2:expected});
+endsnippet
+
+snippet assertdeep "assertdeep"
+assert.deepEqual(${1:actual}, ${2:expected});
+endsnippet
+
+snippet asserteq "asserteq"
+assert.equal(${1:actual}, ${2:expected});
+endsnippet
+
+snippet crypto.createCred "crypto.createCred"
+crypto.createCredentials({key : ${1:key}, cert : ${2:cert}${3:, ca : []});
+endsnippet
+
+snippet env "env"
+process.env.${1:VARIABLE}
+endsnippet
+
+snippet express "express"
+var app = express.createServer();
+
+app.configure(function () {
+  app.set('views', __dirname + '${1:/../views}');
+  ${2:app.use(connect.bodyDecoder());}
+  ${3:app.use(connect.methodOverride());}
+  app.use(connect.compiler({src : __dirname + '/../public', enable : ['less']}));
+  app.use(app.router);
+  app.use(connect.staticProvider(__dirname + '${4:/../public'}));
+});
+
+app.configure('development', function () {
+  app.use(connect.errorHandler({dumpExceptions : true, showStack : true}));
+});
+
+app.configure('production', function () {
+  app.use(connect.errorHandler());
+});
+endsnippet
+
+snippet filt "filt"
+filter(function (item) {
+  return ${1:false};
+});
+endsnippet
+
+snippet forE "forE"
+forEach(function (${1:item}, ${2:index}) {
+  ${3:}
+});
+endsnippet
+
+snippet fs.readFile "fs.readFile"
+fs.readFile('${1:filename}', function (err, data) {
+  ${2: }
+});
+endsnippet
+
+snippet fs.unlink "fs.unlink"
+fs.unlink('${1:location}', function (err) {
+  ${2: }
+});
+endsnippet
+
+snippet fs.watchFile "fs.watchFile"
+fs.watchFile('${1:filename}', function (current, previous) {
+  ${2: }
+});
+endsnippet
+
+snippet fs.writeFile "fs.writeFile"
+fs.writeFile('${1:filename}', ${2:data}, ${3:'utf8'}, function (err) {
+  ${4: }
+});
+endsnippet
+
+snippet func "func"
+function (${1:}) {${2:}}
+endsnippet
+
+snippet http.createClient "http.createClient"
+http.createClient(${1:80}, '${2:www.google.com}');
+endsnippet
+
+snippet http.createServer "http.createServer"
+http.createServer(function (${1:request}, ${2:response}) {
+  ${3:}
+}).listen(${4:8124});
+endsnippet
+
+snippet json.pa "json.pa"
+JSON.parse(${1:'{"string":"of json"}});
+endsnippet
+
+snippet json.st "json.st"
+JSON.stringify(${1:{some:'object'}});
+endsnippet
+
+snippet log "log"
+console.log('${1:message}');
+endsnippet
+
+snippet mongoose.connect "mongoose.connect"
+mongoose.connect('mongodb://${1:localhost}/${2:collection}');
+endsnippet
+
+snippet mongoose.find "mongoose.find"
+${1:Model}.find({${2:}}).all(function (${3:results}) {
+  ${4:}
+});
+endsnippet
+
+snippet mongoose.model "mongoose.model"
+mongoose.model('${1:Model}', {
+  properties: [
+    ${2:'name'}
+  ],
+  indexes: [ ${3:'name'} ],
+  cast: { ${4:} }
+});
+endsnippet
+
+snippet net.createServer "net.createServer"
+net.createServer(function (${1:socket}) {
+  $1.setEncoding("${2:utf8}");
+  $1.on('data', function (data) {
+
+  });
+  $1.on('end', function () {
+
+  });
+}).listen(${3:8124}, '${4:127.0.0.1}');
+endsnippet
+
+snippet on "on"
+on('${1:eventname}', function (${2:err, res}) {
+  ${3:}
+});
+endsnippet
+
+snippet req "req"
+var $1 = require('${1:sys}');
+
+endsnippet
+
+snippet reqfs "reqfs"
+var fs = require('fs');
+
+endsnippet
+
+snippet reqhttp "reqhttp"
+var http = require('http');
+
+endsnippet
+
+snippet reqio "reqio"
+var io = require('socketio');
+
+endsnippet
+
+snippet reqmongoose "reqmongoose"
+var mongoose = require('mongoose').Mongoose;
+
+endsnippet
+
+snippet reqsys "reqsys"
+var sys = require('sys');
+
+endsnippet
+
+snippet reqvows "reqvows"
+var vows = require('vows');
+var assert = require('assert');
+
+vows.describe('${1:something}').addBatch({
+  '${2:firstthing}':{
+    topic : function () {
+    }
+  }
+}).export(module);
+endsnippet
+
+snippet res.render "res.render"
+res.render('${1:template}', {
+  locals:{
+    ${2:templatevars}
+  }
+});
+endsnippet
+
+snippet setinterv "setinterv"
+setInterval(${1:callback}, ${2:delay})
+endsnippet
+
+snippet settime "settime"
+setTimeout(${1:operation}, ${2:miliseconds})
+endsnippet
+
+snippet utili "utili"
+util.inspect(${1:object})
+endsnippet
+
+snippet websocket "websocket"
+var ${1:socket} = ${2:io}.listen(${3:app});
+
+$1.on('connection', function (client) {
+  client.on('message', function (${4:msg}) {
+    ${5:}
+  });
+  client.on('disconnect', function () {
+    ${6:}
+  });
+});
+endsnippet
+
+snippet writeHead "writeHead"
+writeHead(${1:200}, ${2:{'Content-Type':'text/plain'}});
+endsnippet

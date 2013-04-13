@@ -88,9 +88,6 @@
 [submodule "bundle/extradite"]
 	path = bundle/extradite
 	url = https://github.com/int3/vim-extradite.git
-[submodule "resources/snipmate-nodejs"]
-	path = resources/snipmate-nodejs
-	url = https://github.com/othiym23/snipmate-nodejs.git
 [submodule "bundle/tcomment"]
 	path = bundle/tcomment
 	url = https://github.com/vim-scripts/tComment.git
