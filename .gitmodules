@@ -136,9 +136,6 @@
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
 	url = https://github.com/tristen/vim-sparkup
-[submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
-	url = https://github.com/vim-scripts/UltiSnips.git
 [submodule "bundle/snippets"]
 	path = bundle/snippets
 	url = https://github.com/honza/vim-snippets.git
