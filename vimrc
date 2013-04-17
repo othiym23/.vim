@@ -29,6 +29,9 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 if has("autocmd")
+  " a necessary hack to get ftdetect plugins in bundles working
+  filetype off
+  filetype on
   " a lot of the indentation controls have been moved to after/ftplugin/*.vim
   filetype plugin indent on
 
@@ -164,6 +167,9 @@ let g:vimwiki_list = [default_wiki]
 
 " Haskell options
 let g:haddock_browser = "open"
+
+" Go options
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 " Command-T options
 let g:CommandTMaxFiles = 30000
