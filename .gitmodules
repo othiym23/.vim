@@ -142,3 +142,6 @@
 [submodule "bundle/fsharp"]
 	path = bundle/fsharp
 	url = https://github.com/kongo2002/fsharp-vim
+[submodule "bundle/nagios"]
+	path = bundle/nagios
+	url = https://github.com/vim-scripts/nagios-syntax
