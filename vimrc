@@ -144,7 +144,6 @@ map <Leader>j :echo DateFromLongEpoch()<CR>
 
 " Solarized is set up as a plugin
 set background=dark
-let g:solarized_termcolors = 256
 colorscheme solarized
 
 " Powerline has almost too much configuration
@@ -229,7 +228,7 @@ endif
 " Syntastic options
 let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = { "mode": "active",
                            \ 'active_filetypes': ['go', 'haskell', 'ocaml',
                            \    'ruby', 'python', 'yaml',
@@ -238,7 +237,7 @@ let g:syntastic_mode_map = { "mode": "active",
                            \ 'passive_filetypes': [] }
 
 " Ack options
-map <Leader>a :Ack
+map <Leader>a :Ack<space>
 map <Leader>A "zyw:exe ":Ack ".@z<CR>
 map <Leader>c :ccl<CR>:lcl<CR> " clean up Quicklist and Location windows
 
