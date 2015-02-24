@@ -2,7 +2,7 @@ set lines=40 columns=140
 set guioptions-=T
 if has("gui_macvim")
   set fuopt=maxvert,maxhorz
-  set guifont=Consolas:h11
+  set guifont=Consolas\ for\ Powerline:h11
 elseif has("gui_gtk2")
   set guifont=Ubuntu\ Mono\ 12
 end

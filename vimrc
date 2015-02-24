@@ -147,7 +147,7 @@ set background=dark
 colorscheme solarized
 
 " Powerline has almost too much configuration
-let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
 
 " UltiSnips options
@@ -228,7 +228,7 @@ endif
 " Syntastic options
 let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint', 'standard']
 let g:syntastic_mode_map = { "mode": "active",
                            \ 'active_filetypes': ['go', 'haskell', 'ocaml',
                            \    'ruby', 'python', 'yaml',
