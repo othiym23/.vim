@@ -226,6 +226,8 @@ if executable('lushtags')
 endif
 
 " Syntastic options
+" let g:syntastic_debug = 63
+" let g:syntastic_debug_file = '~/syntastic.log'
 let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['standard']
