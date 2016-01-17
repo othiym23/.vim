@@ -170,6 +170,18 @@ let g:haddock_browser = "open"
 " Go options
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
+" new camel-case-motion mappings
+" (otherwise conflicts with Command-T bindings)
+map <S-W> <Plug>CamelCaseMotion_w
+map <S-B> <Plug>CamelCaseMotion_b
+map <S-E> <Plug>CamelCaseMotion_e
+omap <silent> i,w <Plug>CamelCaseMotion_iw
+xmap <silent> i,w <Plug>CamelCaseMotion_iw
+omap <silent> i,b <Plug>CamelCaseMotion_ib
+xmap <silent> i,b <Plug>CamelCaseMotion_ib
+omap <silent> i,e <Plug>CamelCaseMotion_ie
+xmap <silent> i,e <Plug>CamelCaseMotion_ie
+
 " Command-T options
 let g:CommandTMaxFiles = 30000
 let g:CommandTMaxHeight = 10
