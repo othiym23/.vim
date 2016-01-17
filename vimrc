@@ -268,3 +268,6 @@ nnoremap <F4> :NERDTreeToggle<CR>
 autocmd vimenter * if !argc() | NERDTree | endif
 " autoquit if NERDtree is the last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" format Rust buffers on save
+let g:rustfmt_autosave = 1
