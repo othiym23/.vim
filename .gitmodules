@@ -151,3 +151,6 @@
 [submodule "bundle/rust"]
 	path = bundle/rust
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "bundle/redcode"]
+	path = bundle/redcode
+	url = https://github.com/bfontaine/redcode.vim
