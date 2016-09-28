@@ -251,6 +251,7 @@ let g:syntastic_mode_map = { "mode": "active",
                            \ 'passive_filetypes': [] }
 
 " Ack options
+let g:ackprg = "rg --vimgrep"
 map <Leader>a :Ack<space>
 map <Leader>A "zyw:exe ":Ack ".@z<CR>
 map <Leader>c :ccl<CR>:lcl<CR> " clean up Quicklist and Location windows
