@@ -154,3 +154,6 @@
 [submodule "bundle/redcode"]
 	path = bundle/redcode
 	url = https://github.com/bfontaine/redcode.vim
+[submodule "bundle/latex-suite"]
+	path = bundle/latex-suite
+	url = https://github.com/vim-latex/vim-latex
