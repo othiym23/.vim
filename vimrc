@@ -89,6 +89,11 @@ nmap <Leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+" latex-suite steals <C-j> without this
+imap <C-space> <Plug>IMAP_JumpForward
+nmap <C-space> <Plug>IMAP_JumpForward
+vmap <C-space> <Plug>IMAP_JumpForward
+
 " window shortcuts
 map <C-k> <C-w>k
 map <C-j> <C-w>j
