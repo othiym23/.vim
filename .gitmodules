@@ -158,5 +158,5 @@
 	path = bundle/latex-suite
 	url = https://github.com/vim-latex/vim-latex
 [submodule "submodule/toml"]
-	path = submodule/toml
+	path = bundle/toml
 	url = https://github.com/cespare/vim-toml.git
