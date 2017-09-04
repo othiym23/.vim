@@ -175,6 +175,14 @@ let g:haddock_browser = "open"
 " Go options
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
+" Rust options
+set hidden
+let g:racer_cmd = "/Users/ogd/.cargo/bin/racer"
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
+
 " new camel-case-motion mappings
 " (otherwise conflicts with Command-T bindings)
 map <S-W> <Plug>CamelCaseMotion_w

@@ -160,3 +160,6 @@
 [submodule "submodule/toml"]
 	path = bundle/toml
 	url = https://github.com/cespare/vim-toml.git
+[submodule "bundle/rust-racer"]
+	path = bundle/rust-racer
+	url = https://github.com/racer-rust/vim-racer.git
