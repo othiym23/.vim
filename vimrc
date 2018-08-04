@@ -22,6 +22,8 @@ set history=1000        " populate viminfo with command history
 set ruler               " show the cursor position all the time
 set number              " I like line numbers on by default
 set showcmd             " display incomplete commands
+set undofile            " allow undo to persist across buffer closes
+set undodir=~/.cache/vim/undo/
 
 " Switch syntax highlighting on, when the terminal has colors
 if &t_Co > 2 || has("gui_running")
