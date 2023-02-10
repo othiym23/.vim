@@ -144,7 +144,7 @@
 	url = https://github.com/vim-scripts/nagios-syntax
 [submodule "bundle/editorconfig"]
 	path = bundle/editorconfig
-	url = git://github.com/editorconfig/editorconfig-vim.git
+	url = https://github.com/editorconfig/editorconfig-vim
 [submodule "bundle/rust"]
 	path = bundle/rust
 	url = https://github.com/rust-lang/rust.vim.git
