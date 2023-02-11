@@ -198,6 +198,7 @@ omap <silent> i,e <Plug>CamelCaseMotion_ie
 xmap <silent> i,e <Plug>CamelCaseMotion_ie
 
 " Command-T options
+let g:CommandTPreferredImplementation = "ruby"
 let g:CommandTMaxFiles = 30000
 let g:CommandTMaxHeight = 10
 map <Leader>F :CommandTFlush<CR>
