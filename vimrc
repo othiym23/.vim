@@ -4,11 +4,65 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Start by having Pathogen load any external bundles
-if !exists("g:loaded_pathogen")
-  call pathogen#runtime_append_all_bundles()
-  call pathogen#helptags()
-endif
+" Start by setting up plugin system and enumerating bundles
+call plug#begin()
+Plug 'othiym23/haskellmode-vim'
+Plug 'othiym23/oz.vim'
+Plug 'vim-scripts/jQuery'
+Plug 'vim-scripts/keepcase.vim'
+Plug 'vim-scripts/Gundo'
+Plug 'vim-scripts/nagios-syntax'
+Plug 'vim-scripts/otf.vim'
+Plug 'vim-scripts/TaskList.vim'
+Plug 'vim-scripts/tComment'
+Plug 'vim-scripts/vimwiki'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'mileszs/ack.vim'
+Plug 'w0rp/ale'
+Plug 'bkad/CamelCaseMotion'
+Plug 'kchmck/vim-coffee-script'
+Plug 'altercation/vim-colors-solarized'
+Plug 'wincent/Command-T', { 'branch': '7-x-release' }
+Plug 'Lokaltog/vim-easymotion'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'int3/vim-extradite'
+Plug 'brandonbloom/vim-factor'
+Plug 'kongo2002/fsharp-vim'
+Plug 'mattn/gist-vim'
+Plug 'fatih/vim-go'
+Plug 'digitaltoad/vim-jade'
+Plug 'pangloss/vim-javascript'
+Plug 'walm/jshint.vim'
+Plug 'leshill/vim-json'
+Plug 'briancollins/vim-jst'
+Plug 'vim-latex/vim-latex'
+Plug 'groenewege/vim-less'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'scrooloose/nerdtree'
+Plug 'Lokaltog/vim-powerline'
+Plug 'rodjek/vim-puppet'
+Plug 'nelstrom/vim-qargs'
+Plug 'bfontaine/redcode.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+Plug 'kana/vim-smartinput'
+Plug 'honza/vim-snippets'
+Plug 'tristen/vim-sparkup'
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
+Plug 'majutsushi/tagbar'
+Plug 'tomtom/tlib_vim'
+Plug 'cespare/vim-toml'
+Plug 'SirVer/ultisnips'
+Plug 'Raimondi/VimRegEx.vim'
+Plug 'nelstrom/vim-visual-star-search'
+call plug#end()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -151,7 +205,7 @@ map <Leader>j :echo DateFromLongEpoch()<CR>
 
 " Solarized is set up as a plugin
 set background=dark
-colorscheme solarized
+silent! colorscheme solarized
 
 " Powerline has almost too much configuration
 let g:Powerline_symbols = 'fancy'

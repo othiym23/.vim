@@ -62,12 +62,8 @@ preserve_config ".ctags" ".vim/resources/ctags.conf"
 
 cd ~/.vim
 
-echo "Checking out submodules."
-
-# make sure that submodules are correctly configured
-git submodule init > /dev/null
-git submodule sync > /dev/null
-git submodule update --init > /dev/null
+echo "Installing Plugins."
+vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
 
 echo "Setting up Command-T."
 
@@ -79,6 +75,11 @@ fi
 
 cd ~/.vim/bundle/command-t/ruby/command-t
 
+if type asdf &>/dev/null
+then
+    asdf set ruby system
+fi
+
 if type rbenv &>/dev/null
 then
     rbenv local system
@@ -86,6 +87,11 @@ fi
 
 ruby extconf.rb > /dev/null
 make > /dev/null
+
+if type asdf &>/dev/null
+then
+    rm .tool-versions
+fi
 
 if type rbenv &>/dev/null
 then
