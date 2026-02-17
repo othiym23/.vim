@@ -6,8 +6,15 @@ set nocompatible
 
 " Start by setting up plugin system and enumerating bundles
 call plug#begin()
-Plug 'othiym23/haskellmode-vim'
+
+" My problmtunities
 Plug 'othiym23/oz.vim'
+
+" High-level file management utilities
+Plug 'wincent/Command-T', { 'branch': '7-x-release' }
+Plug 'scrooloose/nerdtree'
+
+" one=off utility scripts
 Plug 'vim-scripts/jQuery'
 Plug 'vim-scripts/keepcase.vim'
 Plug 'vim-scripts/Gundo'
@@ -16,6 +23,8 @@ Plug 'vim-scripts/otf.vim'
 Plug 'vim-scripts/TaskList.vim'
 Plug 'vim-scripts/tComment'
 Plug 'vim-scripts/vimwiki'
+
+" The Pope Zone
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
@@ -23,19 +32,17 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'mileszs/ack.vim'
+
+" generic programming-language-related packages
 Plug 'w0rp/ale'
-Plug 'bkad/CamelCaseMotion'
-Plug 'kchmck/vim-coffee-script'
-Plug 'altercation/vim-colors-solarized'
-Plug 'wincent/Command-T', { 'branch': '7-x-release' }
-Plug 'Lokaltog/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'int3/vim-extradite'
+
+" Programmming language modes
+Plug 'kchmck/vim-coffee-script'
 Plug 'brandonbloom/vim-factor'
 Plug 'kongo2002/fsharp-vim'
-Plug 'mattn/gist-vim'
 Plug 'fatih/vim-go'
+Plug 'neovimhaskell/haskell-vim'
 Plug 'digitaltoad/vim-jade'
 Plug 'pangloss/vim-javascript'
 Plug 'walm/jshint.vim'
@@ -43,25 +50,33 @@ Plug 'leshill/vim-json'
 Plug 'briancollins/vim-jst'
 Plug 'vim-latex/vim-latex'
 Plug 'groenewege/vim-less'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'scrooloose/nerdtree'
-Plug 'Lokaltog/vim-powerline'
 Plug 'rodjek/vim-puppet'
-Plug 'nelstrom/vim-qargs'
-Plug 'bfontaine/redcode.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+Plug 'cespare/vim-toml'
+
+" quality of life tools
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'mileszs/ack.vim'
+Plug 'bkad/CamelCaseMotion'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'int3/vim-extradite'
+Plug 'mattn/gist-vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'nelstrom/vim-qargs'
+Plug 'bfontaine/redcode.vim'
 Plug 'kana/vim-smartinput'
-Plug 'honza/vim-snippets'
 Plug 'tristen/vim-sparkup'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
 Plug 'tomtom/tlib_vim'
-Plug 'cespare/vim-toml'
-Plug 'SirVer/ultisnips'
 Plug 'Raimondi/VimRegEx.vim'
 Plug 'nelstrom/vim-visual-star-search'
+
+" theming
+Plug 'tssm/fairyfloss.vim'
+Plug 'Lokaltog/vim-powerline'
 call plug#end()
 
 " allow backspacing over everything in insert mode
@@ -78,6 +93,7 @@ set number              " I like line numbers on by default
 set showcmd             " display incomplete commands
 set undofile            " allow undo to persist across buffer closes
 set undodir=~/.cache/vim/undo/
+set termguicolors
 
 " Switch syntax highlighting on, when the terminal has colors
 if &t_Co > 2 || has("gui_running")
@@ -202,10 +218,7 @@ map <Leader>j :echo DateFromLongEpoch()<CR>
 " PLUGIN CONFIGURATION
 "
 
-
-" Solarized is set up as a plugin
-set background=dark
-silent! colorscheme solarized
+colorscheme fairyfloss
 
 " Powerline has almost too much configuration
 let g:Powerline_symbols = 'fancy'
@@ -341,3 +354,40 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " format Rust buffers on save
 let g:rustfmt_autosave = 1
+" ## added by OPAM user-setup for vim / base ## d611dd144a5764d46fdea4c0c2e0ba07 ## you can edit, but keep this line
+let s:opam_share_dir = system("opam var share")
+let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
+
+let s:opam_configuration = {}
+
+function! OpamConfOcpIndent()
+  execute "set rtp^=" . s:opam_share_dir . "/ocp-indent/vim"
+endfunction
+let s:opam_configuration['ocp-indent'] = function('OpamConfOcpIndent')
+
+function! OpamConfOcpIndex()
+  execute "set rtp+=" . s:opam_share_dir . "/ocp-index/vim"
+endfunction
+let s:opam_configuration['ocp-index'] = function('OpamConfOcpIndex')
+
+function! OpamConfMerlin()
+  let l:dir = s:opam_share_dir . "/merlin/vim"
+  execute "set rtp+=" . l:dir
+endfunction
+let s:opam_configuration['merlin'] = function('OpamConfMerlin')
+
+let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
+let s:opam_available_tools = []
+for tool in s:opam_packages
+  " Respect package order (merlin should be after ocp-index)
+  if isdirectory(s:opam_share_dir . "/" . tool)
+    call add(s:opam_available_tools, tool)
+    call s:opam_configuration[tool]()
+  endif
+endfor
+" ## end of OPAM user-setup addition for vim / base ## keep this line
+" ## added by OPAM user-setup for vim / ocp-indent ## 5fa3e9716a2dea25b7a68056a89d8d3f ## you can edit, but keep this line
+if count(s:opam_available_tools,"ocp-indent") == 0
+  source "/Users/ogd/.opam/5.2.0+ox/share/ocp-indent/vim/indent/ocaml.vim"
+endif
+" ## end of OPAM user-setup addition for vim / ocp-indent ## keep this line
